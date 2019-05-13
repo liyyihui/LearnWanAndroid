@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wenjian.loopbanner.LoopBanner
+        android:id="@+id/banner_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140"
+        app:lb_indicatorStyle="normal"
+        app:lb_pageMargin="4dp"
+        app:lb_lrMargin="16dp"
+        app:lb_interval="4000" />
+
+    <com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
+        android:layout_marginTop="@dimen/dp_142"
+        app:layout_constraintTop_toBottomOf="@+id/banner_tv"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        app:load_text="加载更多"
+        app:progress_bar_color="@color/colorPrimary"
+        app:refresh_text="下拉刷新"
+        app:guidance_text_color="@color/colorPrimary"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_list"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>
